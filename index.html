@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Something I Wanted To Tell You ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050507;
+    color: #f8f3ed;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 22px;
+}
+
+.container {
+    width: min(900px, 100%);
+    margin: auto;
+    text-align: center;
+}
+
+.serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.muted {
+    color: #99918b;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 11px;
+    color: #b9a7a0;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.stars,
+.stars::before,
+.stars::after {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.stars {
+    z-index: -3;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(160,80,90,.12), transparent 28%),
+        radial-gradient(circle at 80% 70%, rgba(100,90,150,.10), transparent 30%),
+        #050507;
+}
+
+.stars::before {
+    content: "";
+    opacity: .5;
+
+    background-image:
+        radial-gradient(#fff 1px, transparent 1px),
+        radial-gradient(#fff 1px, transparent 1px);
+
+    background-size: 140px 140px, 210px 210px;
+    background-position: 0 0, 70px 90px;
+}
+
+.stars::after {
+    content: "";
+    background:
+        radial-gradient(circle at 30% 40%, rgba(255,255,255,.2) 0 1px, transparent 2px),
+        radial-gradient(circle at 70% 25%, rgba(255,255,255,.15) 0 1px, transparent 2px),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,.15) 0 1px, transparent 2px);
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: .25; }
+    to { opacity: .7; }
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(50px, 10vw, 105px);
+    font-weight: 500;
+    line-height: 1;
+    margin: 28px 0;
+}
+
+.hero h1 span {
+    color: #d88b98;
+}
+
+.hero-subtitle {
+    max-width: 560px;
+    margin: auto;
+    color: #aaa29c;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.birthday-label {
+    color: #d99aa4;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.scroll-button {
+    margin-top: 50px;
+    border: 1px solid rgba(255,255,255,.16);
+    background: rgba(255,255,255,.04);
+    color: white;
+    border-radius: 100px;
+    padding: 15px 27px;
+    transition: .4s;
+}
+
+.scroll-button:hover {
+    background: rgba(255,255,255,.09);
+    transform: translateY(-3px);
+}
+
+/* =========================
+   BIRTHDAY
+========================= */
+
+.birthday {
+    background:
+        radial-gradient(circle at center,
+        rgba(194,95,112,.12),
+        transparent 45%);
+}
+
+.birthday h2,
+.story h2,
+.future h2,
+.bucket h2,
+.photo h2,
+.final h2 {
+
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 7vw, 72px);
+    font-weight: 500;
+    margin: 20px 0 30px;
+}
+
+.cake {
+    font-size: 60px;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.birthday-message {
+    max-width: 650px;
+    margin: auto;
+}
+
+.birthday-message p {
+    color: #bdb6b0;
+    line-height: 1.9;
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.birthday-message .special {
+    color: #e0afb6;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin-top: 30px;
+}
+
+/* =========================
+   STORY
+========================= */
+
+.story {
+    background: rgba(0,0,0,.15);
+}
+
+.story-content {
+    max-width: 680px;
+    margin: auto;
+}
+
+.story-content p {
+    color: #bcb5af;
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 24px;
+}
+
+.fade-line {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s ease;
+}
+
+.fade-line.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   FUTURE CARDS
+========================= */
+
+.future {
+    background:
+        radial-gradient(circle at 50% 50%,
+        rgba(140,75,85,.08),
+        transparent 45%);
+}
+
+.future-intro {
+    color: #aaa39e;
+    max-width: 620px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.future-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16px;
+    margin-top: 50px;
+}
+
+.future-card {
+    padding: 30px;
+    text-align: left;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,.08);
+    background: rgba(255,255,255,.035);
+    transition: .5s;
+}
+
+.future-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(216,139,152,.25);
+}
+
+.future-icon {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.future-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.future-card p {
+    color: #aaa39d;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =========================
+   BUCKET LIST
+========================= */
+
+.bucket {
+    background:
+        radial-gradient(circle at 50% 30%,
+        rgba(90,90,150,.08),
+        transparent 45%);
+}
+
+.bucket-intro {
+    max-width: 650px;
+    margin: auto;
+    color: #aaa39d;
+    line-height: 1.8;
+}
+
+.bucket-list {
+    margin-top: 50px;
+    display: grid;
+    gap: 15px;
+}
+
+.place {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 22px;
+
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,.08);
+
+    background: rgba(255,255,255,.035);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: .4s;
+}
+
+.place:hover {
+    transform: translateX(7px);
+    background: rgba(255,255,255,.065);
+}
+
+.place-icon {
+    font-size: 32px;
+    width: 45px;
+    text-align: center;
+}
+
+.place-content {
+    flex: 1;
+}
+
+.place h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.place p {
+    color: #96908a;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.circle {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #625b57;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.place.completed .circle {
+    background: #c06d7a;
+    border-color: #c06d7a;
+}
+
+.place.completed .circle::after {
+    content: "✓";
+    display: block;
+    text-align: center;
+    line-height: 23px;
+    font-size: 13px;
+}
+
+.egypt {
+    border-color: rgba(225,190,110,.25);
+    background: linear-gradient(
+        135deg,
+        rgba(205,165,80,.08),
+        rgba(255,255,255,.025)
+    );
+}
+
+.list-question {
+    margin-top: 45px;
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    color: #d5c9c1;
+}
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo {
+    background:
+        radial-gradient(circle at center,
+        rgba(160,70,85,.10),
+        transparent 40%);
+}
+
+.photo-frame {
+    width: min(75vw, 350px);
+    aspect-ratio: 3/4;
+    margin: 45px auto 35px;
+    padding: 12px;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    position: relative;
+
+    background: rgba(255,255,255,.025);
+
+    box-shadow:
+        0 0 80px rgba(190,90,105,.08);
+
+    animation: frameGlow 5s ease-in-out infinite;
+}
+
+@keyframes frameGlow {
+
+    0%,100% {
+        box-shadow:
+            0 0 50px rgba(190,90,105,.04);
+    }
+
+    50% {
+        box-shadow:
+            0 0 90px rgba(190,90,105,.14);
+    }
+}
+
+.photo-inner {
+    width: 100%;
+    height: 100%;
+
+    border: 1px dashed rgba(255,255,255,.13);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 35px;
+}
+
+.photo-inner span {
+    color: #756e69;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.photo-description {
+    max-width: 580px;
+    margin: auto;
+    color: #aaa39d;
+    line-height: 1.8;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    background:
+        radial-gradient(circle at center,
+        rgba(180,75,95,.15),
+        transparent 42%);
+}
+
+.final h2 {
+    font-size: clamp(50px, 9vw, 90px);
+}
+
+.final-text {
+    max-width: 620px;
+    margin: auto;
+}
+
+.final-text p {
+    color: #b9b1ab;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.question {
+    margin-top: 35px;
+    color: #e4b8be !important;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px !important;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.choice {
+    padding: 15px 23px;
+    border-radius: 100px;
+
+    color: #eee;
+    background: transparent;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    transition: .3s;
+}
+
+.choice:hover {
+    transform: translateY(-4px);
+}
+
+.choice.primary {
+    background: #a85f6a;
+    border-color: #a85f6a;
+}
+
+.response {
+    display: none;
+    margin: 40px auto 0;
+    max-width: 500px;
+
+    color: #d8c8c1;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 23px;
+    line-height: 1.7;
+}
+
+.footer {
+    margin-top: 90px;
+    color: #55504c;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:650px) {
+
+    section {
+        padding: 80px 18px;
+    }
+
+    .future-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .place {
+        padding: 17px;
+    }
+
+    .place-icon {
+        font-size: 27px;
+        width: 35px;
+    }
+
+    .place p {
+        font-size: 12px;
+    }
+
+    .birthday-message p,
+    .story-content p {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="stars"></div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="container">
+
+    <div class="birthday-label">
+        🎂 Happy Birthday
+    </div>
+
+    <div class="eyebrow">
+        Khushi
+    </div>
+
+    <h1>
+        Today is<br>
+        <span>about you.</span>
+    </h1>
+
+    <p class="hero-subtitle">
+        I wanted to wish you properly...
+        but there was something else
+        I've been wanting to tell you.
+    </p>
+
+    <button
+        class="scroll-button"
+        onclick="go('birthday')">
+
+        Come with me ↓
+
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     BIRTHDAY
+========================= -->
+
+<section class="birthday" id="birthday">
+
+<div class="container">
+
+    <div class="cake">🎂</div>
+
+    <div class="eyebrow">
+        First things first
+    </div>
+
+    <h2>
+        Happy Birthday, Khushi.
+    </h2>
+
+    <div class="birthday-message">
+
+        <p>
+            I hope this year gives you more reasons
+            to smile, more opportunities to grow,
+            and more moments that you'll remember
+            for a long time.
+        </p>
+
+        <p>
+            I hope you get closer to the things
+            you've been dreaming about...
+            including that Egypt trip you've always wanted.
+        </p>
+
+        <p>
+            And I hope you never forget how much
+            potential you have.
+        </p>
+
+        <p class="special">
+            You deserve a beautiful year.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONFESSION
+========================= -->
+
+<section class="story">
+
+<div class="container">
+
+    <div class="eyebrow">
+        Now the honest part
+    </div>
+
+    <h2>
+        There's something else.
+    </h2>
+
+    <div class="story-content">
+
+        <p class="fade-line">
+            Somewhere along the way,
+            you started becoming someone
+            I think about differently.
+        </p>
+
+        <p class="fade-line">
+            And I've caught myself wondering...
+            what would life look like
+            if it were actually <i>us</i>?
+        </p>
+
+        <p class="fade-line">
+            I don't know what the answer is.
+            And I don't want to assume
+            that you feel the same.
+        </p>
+
+        <p class="fade-line">
+            But I know what I'd hope for
+            if we ever decided to give
+            this a chance.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     RELATIONSHIP
+========================= -->
+
+<section class="future">
+
+<div class="container">
+
+    <div class="eyebrow">
+        If it were us
+    </div>
+
+    <h2>
+        This is what I'd want.
+    </h2>
+
+    <p class="future-intro">
+        Not some perfect movie relationship.
+        Just something real.
+        Something where we're on the same team.
+    </p>
+
+
+    <div class="future-grid">
+
+
+        <div class="future-card">
+
+            <div class="future-icon">
+                🌙
+            </div>
+
+            <h3>
+                Weekends together
+            </h3>
+
+            <p>
+                Random plans.
+                Food.
+                Movies.
+                Long conversations.
+                Drives with no destination.
+                And sometimes doing absolutely nothing,
+                together.
+            </p>
+
+        </div>
+
+
+        <div class="future-card">
+
+            <div class="future-icon">
+                🚀
+            </div>
+
+            <h3>
+                Supporting each other
+            </h3>
+
+            <p>
+                I want to see you chase your career
+                and your ambitions.
+                Your dreams would matter to me
+                just as much as mine.
+            </p>
+
+        </div>
+
+
+        <div class="future-card">
+
+            <div class="future-icon">
+                ✈️
+            </div>
+
+            <h3>
+                Seeing the world
+            </h3>
+
+            <p>
+                I want us to travel,
+                explore places we've never seen,
+                get lost sometimes,
+                and come home with stories.
+            </p>
+
+        </div>
+
+
+        <div class="future-card">
+
+            <div class="future-icon">
+                🤝
+            </div>
+
+            <h3>
+                Growing together
+            </h3>
+
+            <p>
+                Supporting each other without
+                losing ourselves.
+                Becoming better individually
+                while still choosing each other.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     BUCKET LIST
+========================= -->
+
+<section class="bucket">
+
+<div class="container">
+
+    <div class="eyebrow">
+        The adventure
+    </div>
+
+    <h2>
+        There's a list.
+    </h2>
+
+    <p class="bucket-intro">
+        I've always had a ridiculous list of things
+        I want to experience in this life.
+
+        But lately I've been thinking...
+
+        maybe the best part isn't where we go.
+
+        Maybe it's who we go with.
+    </p>
+
+
+    <div class="bucket-list">
+
+
+        <div
+            class="place egypt"
+            onclick="complete(this)">
+
+            <div class="place-icon">
+                🇪🇬
+            </div>
+
+            <div class="place-content">
+
+                <h3>
+                    Egypt — Your dream
+                </h3>
+
+                <p>
+                    You want to see Egypt.
+                    So I'd love for this to be
+                    one of the first adventures
+                    we share.
+                </p>
+
+            </div>
+
+            <div class="circle"></div>
+
+        </div>
+
+
+        <div
+            class="place"
+            onclick="complete(this)">
+
+            <div class="place-icon">
+                🇯🇵
+            </div>
+
+            <div class="place-content">
+
+                <h3>
+                    Japan
+                </h3>
+
+                <p>
+                    Tokyo. Kyoto.
+                    Amazing food.
+                    Beautiful places.
+                    And getting completely lost together.
+                </p>
+
+            </div>
+
+            <div class="circle"></div>
+
+        </div>
+
+
+        <div
+            class="place"
+            onclick="complete(this)">
+
+            <div class="place-icon">
+                🇪🇸
+            </div>
+
+            <div class="place-content">
+
+                <h3>
+                    La Tomatina — Spain
+                </h3>
+
+                <p>
+                    One giant tomato fight.
+                    Zero dignity.
+                    Probably one amazing story.
+                </p>
+
+            </div>
+
+            <div class="circle"></div>
+
+        </div>
+
+
+        <div
+            class="place"
+            onclick="complete(this)">
+
+            <div class="place-icon">
+                🇬🇧
+            </div>
+
+            <div class="place-content">
+
+                <h3>
+                    Ashes at Lord's
+                </h3>
+
+                <p>
+                    Watching England vs Australia
+                    together at the Home of Cricket.
+                </p>
+
+            </div>
+
+            <div class="circle"></div>
+
+        </div>
+
+
+        <div
+            class="place"
+            onclick="complete(this)">
+
+            <div class="place-icon">
+                🇫🇷
+            </div>
+
+            <div class="place-content">
+
+                <h3>
+                    Paris
+                </h3>
+
+                <p>
+                    Eiffel Tower.
+                    City lights.
+                    And some ridiculous adventure
+                    we probably won't plan properly.
+                </p>
+
+            </div>
+
+            <div class="circle"></div>
+
+        </div>
+
+
+        <div
+            class="place"
+            onclick="complete(this)">
+
+            <div class="place-icon">
+                🪂
+            </div>
+
+            <div class="place-content">
+
+                <h3>
+                    Skydiving
+                </h3>
+
+                <p>
+                    One jump.
+                    Two people questioning
+                    their life choices.
+                </p>
+
+            </div>
+
+            <div class="circle"></div>
+
+        </div>
+
+
+        <div
+            class="place"
+            onclick="complete(this)">
+
+            <div class="place-icon">
+                ✨
+            </div>
+
+            <div class="place-content">
+
+                <h3>
+                    Your next dream
+                </h3>
+
+                <p>
+                    Because this list shouldn't
+                    only be mine.
+                    I want to know where
+                    you want to go too.
+                </p>
+
+            </div>
+
+            <div class="circle"></div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="list-question">
+        Will you help me complete it?
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PHOTO
+========================= -->
+
+<section class="photo">
+
+<div class="container">
+
+    <div class="eyebrow">
+        One thing is missing
+    </div>
+
+    <h2>
+        Our picture.
+    </h2>
+
+
+    <div class="photo-frame">
+
+        <div class="photo-inner">
+
+            <span>
+                There's no picture
+                of us here yet.
+                <br><br>
+                I don't want to fake one.
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <p class="photo-description">
+
+        Maybe someday, if you want the same thing I do,
+        we'll have a picture that belongs here.
+
+        Not because I planned it.
+
+        But because we lived the moment
+        that made it worth taking.
+
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FINAL QUESTION
+========================= -->
+
+<section class="final">
+
+<div class="container">
+
+    <div class="eyebrow">
+        One last thing
+    </div>
+
+    <h2>
+        So...
+    </h2>
+
+
+    <div class="final-text">
+
+        <p>
+            I'm not asking you to promise me
+            a future.
+        </p>
+
+        <p>
+            I'm not asking you to have
+            all the answers right now.
+        </p>
+
+        <p>
+            I just wanted you to know
+            what I've been imagining.
+        </p>
+
+        <p class="question">
+            Would you like to find out
+            what "us" could look like?
+        </p>
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button
+            class="choice primary"
+            onclick="answer('yes')">
+
+            ❤️ I'd like to find out
+
+        </button>
+
+
+        <button
+            class="choice"
+            onclick="answer('time')">
+
+            🌱 I need some time
+
+        </button>
+
+
+        <button
+            class="choice"
+            onclick="answer('friends')">
+
+            🤍 I'd rather stay friends
+
+        </button>
+
+    </div>
+
+
+    <div
+        class="response"
+        id="response">
+    </div>
+
+
+    <div class="footer">
+
+        Made with a little courage,
+        a lot of code,
+        and a birthday wish.
+
+    </div>
+
+</div>
+
+</section>
+
+
+<script>
+/* =========================
+   SUPABASE EDGE FUNCTION
+========================= */
+
+const FUNCTION_URL =
+    "https://ixttkidgicstzurloclx.supabase.co/functions/v1/smart-endpoint";
+
+
+/* =========================
+   PRIVATE TOKEN
+========================= */
+
+const params = new URLSearchParams(window.location.search);
+const TOKEN = params.get("token");
+
+let linkExpired = false;
+
+
+/* =========================
+   CALL BACKEND
+========================= */
+
+async function callBackend(action, extra = {}) {
+
+    if (!TOKEN) {
+        throw new Error("Missing private link token.");
+    }
+
+    const response = await fetch(FUNCTION_URL, {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            action,
+            token: TOKEN,
+            ...extra
+        })
+
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+        throw new Error(data.error || "Something went wrong.");
+    }
+
+    return data;
+}
+
+
+/* =========================
+   OPEN PRIVATE LINK
+========================= */
+
+async function initializeLink() {
+
+    if (!TOKEN) {
+
+        showExpiredMessage(
+            "This private link is missing its access code."
+        );
+
+        return;
+    }
+
+    try {
+
+        const data =
+            await callBackend("open");
+
+        const expiresAt =
+            new Date(data.expires_at);
+
+        if (expiresAt <= new Date()) {
+
+            showExpiredMessage(
+                "This link has expired."
+            );
+
+            return;
+        }
+
+        console.log(
+            "Private link active until:",
+            expiresAt
+        );
+
+        startExpiryTimer(expiresAt);
+
+        restoreBucketChoices(
+            data.bucket_choices || []
+        );
+
+    } catch (error) {
+
+        console.error(error);
+
+        showExpiredMessage(
+            error.message
+        );
+
+    }
+
+}
+
+
+/* =========================
+   EXPIRATION TIMER
+========================= */
+
+function startExpiryTimer(expiresAt) {
+
+    function checkExpiry() {
+
+        if (new Date() >= expiresAt) {
+
+            linkExpired = true;
+
+            showExpiredMessage(
+                "This private link has expired."
+            );
+
+        }
+
+    }
+
+    checkExpiry();
+
+    const timer =
+        setInterval(() => {
+
+            if (new Date() >= expiresAt) {
+
+                clearInterval(timer);
+
+                linkExpired = true;
+
+                showExpiredMessage(
+                    "This private link has expired."
+                );
+
+            }
+
+        }, 1000);
+
+}
+
+
+/* =========================
+   EXPIRATION MESSAGE
+========================= */
+
+function showExpiredMessage(message) {
+
+    linkExpired = true;
+
+    document.querySelectorAll("button").forEach(button => {
+
+        button.disabled = true;
+        button.style.opacity = "0.45";
+        button.style.cursor = "not-allowed";
+
+    });
+
+    document.querySelectorAll(".place").forEach(place => {
+
+        place.style.pointerEvents = "none";
+        place.style.opacity = "0.45";
+
+    });
+
+    const response =
+        document.getElementById("response");
+
+    if (response) {
+
+        response.style.display = "block";
+
+        response.innerHTML =
+            message;
+
+    }
+
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+function go(id) {
+
+    if (linkExpired) return;
+
+    document
+        .getElementById(id)
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* =========================
+   STORY REVEAL
+========================= */
+
+const lines =
+    document.querySelectorAll(".fade-line");
+
+const observer =
+    new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target
+                        .classList
+                        .add("visible");
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: .25
+        }
+
+    );
+
+
+lines.forEach(line =>
+    observer.observe(line)
+);
+
+
+/* =========================
+   BUCKET LIST
+========================= */
+
+async function complete(place) {
+
+    if (linkExpired) return;
+
+    place
+        .classList
+        .toggle("completed");
+
+    const selectedPlaces =
+        Array.from(
+            document.querySelectorAll(".place.completed")
+        ).map(place => {
+
+            const title =
+                place.querySelector("h3");
+
+            return title
+                ? title.innerText
+                : "";
+
+        });
+
+    try {
+
+        await callBackend(
+            "save_buckets",
+            {
+                choices: selectedPlaces
+            }
+        );
+
+        console.log(
+            "Bucket list saved."
+        );
+
+    } catch (error) {
+
+        console.error(error);
+
+        place
+            .classList
+            .toggle("completed");
+
+        alert(
+            "I couldn't save that choice. Please try again."
+        );
+
+    }
+
+}
+
+
+/* =========================
+   RESTORE BUCKET LIST
+========================= */
+
+function restoreBucketChoices(choices) {
+
+    if (!Array.isArray(choices)) return;
+
+    document
+        .querySelectorAll(".place")
+        .forEach(place => {
+
+            const title =
+                place.querySelector("h3");
+
+            if (!title) return;
+
+            if (choices.includes(title.innerText)) {
+
+                place
+                    .classList
+                    .add("completed");
+
+            }
+
+        });
+
+}
+
+
+/* =========================
+   FINAL ANSWER
+========================= */
+
+async function answer(type) {
+
+    if (linkExpired) return;
+
+    const response =
+        document.getElementById("response");
+
+    try {
+
+        await callBackend(
+            "final_answer",
+            {
+                answer: type
+            }
+        );
+
+        response.style.display = "block";
+
+
+        if (type === "yes") {
+
+            response.innerHTML =
+                "Then let's not try to figure out<br>" +
+                "the whole future at once.<br><br>" +
+                "Let's just take the first step. ❤️";
+
+        }
+
+
+        if (type === "time") {
+
+            response.innerHTML =
+                "Take your time.<br><br>" +
+                "There is no pressure here.<br>" +
+                "I just wanted you to know how I feel. 🌱";
+
+        }
+
+
+        if (type === "friends") {
+
+            response.innerHTML =
+                "Thank you for being honest with me.<br><br>" +
+                "Whatever you choose,<br>" +
+                "I respect it. 🤍";
+
+        }
+
+
+        document
+            .querySelectorAll(".choice")
+            .forEach(button => {
+
+                button.disabled = true;
+                button.style.opacity = "0.5";
+
+            });
+
+
+        response.scrollIntoView({
+
+            behavior: "smooth",
+            block: "center"
+
+        });
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        response.style.display = "block";
+
+        response.innerHTML =
+            "Something went wrong.<br>" +
+            "Please try again.";
+
+    }
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+initializeLink();
+
+</script>
+</body>
+</html>
